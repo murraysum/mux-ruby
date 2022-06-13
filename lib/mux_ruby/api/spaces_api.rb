@@ -21,7 +21,7 @@ module MuxRuby
     end
     # Create a space
     # Create a new space. Spaces are used to build [real-time video applications.](https://mux.com/real-time-video)
-    # @param create_space_request [CreateSpaceRequest] 
+    # @param create_space_request [CreateSpaceRequest]
     # @param [Hash] opts the optional parameters
     # @return [SpaceResponse]
     def create_space(create_space_request, opts = {})
@@ -31,7 +31,7 @@ module MuxRuby
 
     # Create a space
     # Create a new space. Spaces are used to build [real-time video applications.](https://mux.com/real-time-video)
-    # @param create_space_request [CreateSpaceRequest] 
+    # @param create_space_request [CreateSpaceRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(SpaceResponse, Integer, Hash)>] SpaceResponse data, response status code and response headers
     def create_space_with_http_info(create_space_request, opts = {})
@@ -87,7 +87,7 @@ module MuxRuby
     # Create a space broadcast
     # Creates a new broadcast. Broadcasts are used to create composited versions of your space, which can be broadcast to live streams.  **Note:** By default only a single broadcast destination can be specified. Contact Mux support if you need more.
     # @param space_id [String] The space ID.
-    # @param create_broadcast_request [CreateBroadcastRequest] 
+    # @param create_broadcast_request [CreateBroadcastRequest]
     # @param [Hash] opts the optional parameters
     # @return [BroadcastResponse]
     def create_space_broadcast(space_id, create_broadcast_request, opts = {})
@@ -98,7 +98,7 @@ module MuxRuby
     # Create a space broadcast
     # Creates a new broadcast. Broadcasts are used to create composited versions of your space, which can be broadcast to live streams.  **Note:** By default only a single broadcast destination can be specified. Contact Mux support if you need more.
     # @param space_id [String] The space ID.
-    # @param create_broadcast_request [CreateBroadcastRequest] 
+    # @param create_broadcast_request [CreateBroadcastRequest]
     # @param [Hash] opts the optional parameters
     # @return [Array<(BroadcastResponse, Integer, Hash)>] BroadcastResponse data, response status code and response headers
     def create_space_broadcast_with_http_info(space_id, create_broadcast_request, opts = {})
@@ -114,7 +114,7 @@ module MuxRuby
         fail ArgumentError, "Missing the required parameter 'create_broadcast_request' when calling SpacesApi.create_space_broadcast"
       end
       # resource path
-      local_var_path = '/video/v1/spaces/${SPACE_ID}/broadcasts'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s))
+      local_var_path = '/video/v1/spaces/{SPACE_ID}/broadcasts'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -179,7 +179,7 @@ module MuxRuby
         fail ArgumentError, "Missing the required parameter 'space_id' when calling SpacesApi.delete_space"
       end
       # resource path
-      local_var_path = '/video/v1/spaces/${SPACE_ID}'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s))
+      local_var_path = '/video/v1/spaces/{SPACE_ID}'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -246,7 +246,7 @@ module MuxRuby
         fail ArgumentError, "Missing the required parameter 'broadcast_id' when calling SpacesApi.delete_space_broadcast"
       end
       # resource path
-      local_var_path = '/video/v1/spaces/${SPACE_ID}/broadcasts/${BROADCAST_ID}'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s)).sub('{' + 'BROADCAST_ID' + '}', CGI.escape(broadcast_id.to_s))
+      local_var_path = '/video/v1/spaces/{SPACE_ID}/broadcasts/{BROADCAST_ID}'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s)).sub('{' + 'BROADCAST_ID' + '}', CGI.escape(broadcast_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -307,7 +307,7 @@ module MuxRuby
         fail ArgumentError, "Missing the required parameter 'space_id' when calling SpacesApi.get_space"
       end
       # resource path
-      local_var_path = '/video/v1/spaces/${SPACE_ID}'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s))
+      local_var_path = '/video/v1/spaces/{SPACE_ID}'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -376,7 +376,7 @@ module MuxRuby
         fail ArgumentError, "Missing the required parameter 'broadcast_id' when calling SpacesApi.get_space_broadcast"
       end
       # resource path
-      local_var_path = '/video/v1/spaces/${SPACE_ID}/broadcasts/${BROADCAST_ID}'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s)).sub('{' + 'BROADCAST_ID' + '}', CGI.escape(broadcast_id.to_s))
+      local_var_path = '/video/v1/spaces/{SPACE_ID}/broadcasts/{BROADCAST_ID}'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s)).sub('{' + 'BROADCAST_ID' + '}', CGI.escape(broadcast_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -508,7 +508,7 @@ module MuxRuby
         fail ArgumentError, "Missing the required parameter 'broadcast_id' when calling SpacesApi.start_space_broadcast"
       end
       # resource path
-      local_var_path = '/video/v1/spaces/${SPACE_ID}/broadcasts/${BROADCAST_ID}/start'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s)).sub('{' + 'BROADCAST_ID' + '}', CGI.escape(broadcast_id.to_s))
+      local_var_path = '/video/v1/spaces/{SPACE_ID}/broadcasts/{BROADCAST_ID}/start'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s)).sub('{' + 'BROADCAST_ID' + '}', CGI.escape(broadcast_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -577,7 +577,7 @@ module MuxRuby
         fail ArgumentError, "Missing the required parameter 'broadcast_id' when calling SpacesApi.stop_space_broadcast"
       end
       # resource path
-      local_var_path = '/video/v1/spaces/${SPACE_ID}/broadcasts/${BROADCAST_ID}/stop'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s)).sub('{' + 'BROADCAST_ID' + '}', CGI.escape(broadcast_id.to_s))
+      local_var_path = '/video/v1/spaces/{SPACE_ID}/broadcasts/{BROADCAST_ID}/stop'.sub('{' + 'SPACE_ID' + '}', CGI.escape(space_id.to_s)).sub('{' + 'BROADCAST_ID' + '}', CGI.escape(broadcast_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
